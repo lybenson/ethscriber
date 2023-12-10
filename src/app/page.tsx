@@ -1,5 +1,4 @@
 'use client'
-import ChainSelect from '@/components/ChainSelect'
 import Header from '@/components/Header'
 import PrivateKeyMode from '@/components/PrivateKeyMode'
 import WalletMode from '@/components/WalletMode'
@@ -28,8 +27,6 @@ export default function Home() {
             <PrivateKeyMode />
           </Tab>
         </Tabs>
-
-        <ChainSelect />
       </main>
     </>
   )

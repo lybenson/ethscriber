@@ -1,3 +1,15 @@
-import { mainnet, polygon } from 'viem/chains'
+import { arbitrum, eos, mainnet, polygon, zkSync } from 'viem/chains'
 
-export const supportChains = [mainnet, polygon]
+// import * as chains from 'viem/chains'
+// function fileterMainnetChain() {
+//   const mainnetChain: chains.Chain[] = []
+//   Object.keys(chains).forEach((chainName: string) => {
+//     // @ts-ignore
+//     const chain: chains.Chain = chains[chainName]
+//     if (!chain.testnet) mainnetChain.push(chain)
+//   })
+
+//   return mainnetChain
+// }
+
+export const supportChains = [mainnet, arbitrum, zkSync, eos, polygon]

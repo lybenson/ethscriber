@@ -1,3 +1,3 @@
 export default function PrivateKeyMode() {
-  return <div>PrivateKeyMode</div>
+  return <div>Comming soon</div>
 }

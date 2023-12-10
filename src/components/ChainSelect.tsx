@@ -2,13 +2,33 @@
 
 import { supportChains } from '@/constants/chains'
 import { Select, SelectItem } from '@nextui-org/react'
+import { ChangeEvent, Key, useState } from 'react'
+import { mainnet } from 'wagmi'
 
-export default function ChainSelect() {
+interface ChainSelectProps {
+  onSelectionChange: (event: ChangeEvent<HTMLSelectElement>) => void
+}
+
+export default function ChainSelect(props: ChainSelectProps) {
   return (
-    <Select defaultSelectedKeys={String(supportChains[0].id)}>
-      {supportChains.map((chain) => (
-        <SelectItem key={chain.id}>{chain.name}</SelectItem>
-      ))}
+    <Select
+      isRequired
+      label='Chain'
+      onChange={props.onSelectionChange}
+      defaultSelectedKeys={[String(mainnet.id)]}
+      items={supportChains}
+      scrollShadowProps={{
+        isEnabled: false
+      }}
+    >
+      {(chain) => (
+        <SelectItem
+          key={chain.id}
+          value={chain.id}
+        >
+          {chain.name}
+        </SelectItem>
+      )}
     </Select>
   )
 }

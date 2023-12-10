@@ -22,6 +22,7 @@ export default function ThemeSwitcher() {
       }
       defaultSelected={theme === 'light' ? false : true}
       size='lg'
+      color='success'
       startContent={<SunIcon />}
       endContent={<MoonIcon />}
     />
