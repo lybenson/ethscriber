@@ -12,4 +12,6 @@ import { arbitrum, eos, mainnet, polygon, zkSync } from 'viem/chains'
 //   return mainnetChain
 // }
 
-export const supportChains = [mainnet, arbitrum, zkSync, eos, polygon]
+export const supportChains = [mainnet, arbitrum, zkSync, eos, polygon] as const
+
+export type supportChainIds = (typeof supportChains)[number]['id']

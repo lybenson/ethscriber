@@ -51,8 +51,7 @@ export default function WalletMode() {
       setRunning(false)
     }
   }
-  //localhost:3000/?react-aria5639592163-%3Arl%3A=text
-  http: return (
+  return (
     <div>
       <form
         className='flex flex-col gap-6'
