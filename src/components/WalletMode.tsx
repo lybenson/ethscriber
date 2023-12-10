@@ -12,7 +12,6 @@ import { Address, useAccount, useNetwork } from 'wagmi'
 import { sendTransaction, switchNetwork } from 'wagmi/actions'
 import { useModal } from 'connectkit'
 import { Hex, toHex } from 'viem'
-import { useFormState } from 'react-dom'
 
 export default function WalletMode() {
   const [transferToSelf, setTransferToSelf] = useState(true)
