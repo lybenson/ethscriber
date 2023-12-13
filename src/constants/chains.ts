@@ -1,4 +1,11 @@
-import { arbitrum, eos, mainnet, polygon, zkSync } from 'viem/chains'
+import {
+  arbitrum,
+  confluxESpace,
+  eos,
+  mainnet,
+  polygon,
+  zkSync
+} from 'viem/chains'
 
 // import * as chains from 'viem/chains'
 // function fileterMainnetChain() {
@@ -12,6 +19,13 @@ import { arbitrum, eos, mainnet, polygon, zkSync } from 'viem/chains'
 //   return mainnetChain
 // }
 
-export const supportChains = [mainnet, arbitrum, zkSync, eos, polygon]
+export const supportChains = [
+  mainnet,
+  arbitrum,
+  zkSync,
+  eos,
+  polygon,
+  confluxESpace
+]
 
 export type supportChainIds = (typeof supportChains)[number]['id']
